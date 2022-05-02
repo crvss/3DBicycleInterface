@@ -332,12 +332,17 @@ PrefabInstance:
     - target: {fileID: 6451198357906628918, guid: 161e3e6c069488643896f4002a5e784c,
         type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6451198357906628918, guid: 161e3e6c069488643896f4002a5e784c,
         type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451198357906628918, guid: 161e3e6c069488643896f4002a5e784c,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 1400
       objectReference: {fileID: 0}
     - target: {fileID: 8509998648876922158, guid: 161e3e6c069488643896f4002a5e784c,
         type: 3}
@@ -444,7 +449,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f36829f14d8bf8f4ea99981ebe2e252d, type: 2}
+  - {fileID: 2100000, guid: 954c67dd30e94784880aeabd9afc6953, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -481,14 +486,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206678341}
-  m_LocalRotation: {x: 0.017016122, y: 0, z: 0, w: 0.9998552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.00092196465, y: 0, z: -1}
   m_LocalScale: {x: 500, y: 1, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 1.95, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354025339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,12 +1504,17 @@ PrefabInstance:
     - target: {fileID: 6371872650005430443, guid: 9eaa949e5db14c34e9f206f228c98e55,
         type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6371872650005430443, guid: 9eaa949e5db14c34e9f206f228c98e55,
         type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371872650005430443, guid: 9eaa949e5db14c34e9f206f228c98e55,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 1400
       objectReference: {fileID: 0}
     - target: {fileID: 8643432973248402611, guid: 9eaa949e5db14c34e9f206f228c98e55,
         type: 3}
@@ -1631,11 +1641,11 @@ MonoBehaviour:
   enableStoppiesBETA: 1
   isGrounded: 0
   isCrashed: 0
-  firstGearTorque: 50
-  topGearTorque: 35
+  firstGearTorque: 200
+  topGearTorque: 150
   isAutomatic: 1
   useKmph: 0
-  maxSpeed: 25
+  maxSpeed: 100
   maxReverseSpeed: 3
   msToMph: 2.237
   currentSpeed: 0
@@ -1654,10 +1664,10 @@ MonoBehaviour:
   maxSteerAngle: 25
   speedForMinSteer: 50
   steerLeanTorque: 0.5
-  wheelieTorque: 75
-  stoppieTorque: 150
-  backFlipTorque: 50
-  inAirSpinTorque: 50
+  wheelieTorque: 750
+  stoppieTorque: 1500
+  backFlipTorque: 500
+  inAirSpinTorque: 500
   wheelColliders:
   - {fileID: 88032022}
   - {fileID: 1507282859}
@@ -1675,7 +1685,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558019741}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06777235816714c489f1a8c56d832869, type: 3}
   m_Name: 
@@ -1848,18 +1858,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558019741}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9b65946d725be044a825709ebe5eb7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoLevelForce: 2
+  autoLevelForce: 0
   safeWheelies: 0
   antiLoopStrength: 10
   maxWheelieAngle: 45
   maxAngleMultiplier: 1.25
   dotForAutoLevel: 0.2
-  antiSpinTorque: 5
+  antiSpinTorque: 50
 --- !u!54 &1558019750
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1868,7 +1878,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558019741}
   serializedVersion: 2
-  m_Mass: 60
+  m_Mass: 100
   m_Drag: 0.05
   m_AngularDrag: 1
   m_UseGravity: 1
